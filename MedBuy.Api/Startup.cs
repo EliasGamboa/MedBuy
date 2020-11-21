@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using FluentValidation.AspNetCore;
 using MedBuy.Domain.Interfaces;
 using MedBuy.Infraestructure;
 using MedBuy.Infraestructure.Data;
@@ -34,8 +35,11 @@ namespace MedBuy.Api
         {
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllers();
-            services.AddDbContext<MedBuyContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Connectionname")));
+            services.AddDbContext<MedBuyContext>(options => 
+                options.UseSqlServer(Configuration.GetConnectionString("MedBuyConnection"))
+            );
             services.AddTransient<IUsuarioRepository, UsuarioRepository>();
+            services.AddMvc().AddFluentValidation(options => options.RegisterValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

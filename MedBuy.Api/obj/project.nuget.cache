@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "VO9B/4DyBRKEgcd7YjpwtH8YIfpniGG5zDl2KjBCVVGmBYPhC7I/3y80mgPxI/PWw3jMBP9DWwS/KZ5C0KyBzA==",
+  "dgSpecHash": "p0giw38Y3zrW1gnjsQpTEO1MSrE4wKYUB+udlZzBTeciWa3VhGebdEwqQcZJ8rbOblo6DHWVSLFNeJe/pNCKGg==",
   "success": true,
   "projectFilePath": "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Api\\MedBuy.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\saile\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\saile\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+    "C:\\Users\\saile\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
+    "C:\\Users\\saile\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.3.0\\fluentvalidation.aspnetcore.9.3.0.nupkg.sha512",
+    "C:\\Users\\saile\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.3.0\\fluentvalidation.dependencyinjectionextensions.9.3.0.nupkg.sha512",
     "C:\\Users\\saile\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\saile\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\saile\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

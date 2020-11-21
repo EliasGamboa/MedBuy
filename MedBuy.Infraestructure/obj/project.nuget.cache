@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "MeceTNJMQPWVqYwll1JT2nkltD2UpnyJb67otdQi57wfoUPTirmxEDBvXK0mGX/iIZpLa18+V5znHVdUk/3S3Q==",
+  "dgSpecHash": "aSC07hYN17traUdWsnhnH69dSduZsUnb1Rmuinz19rBwpoIgZ+h11JWL26Llub9GeCVJCg/REYGuNPbTR6iWSg==",
   "success": true,
   "projectFilePath": "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Infraestructure\\MedBuy.Infraestructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\saile\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\saile\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+    "C:\\Users\\saile\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
+    "C:\\Users\\saile\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.3.0\\fluentvalidation.aspnetcore.9.3.0.nupkg.sha512",
+    "C:\\Users\\saile\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.3.0\\fluentvalidation.dependencyinjectionextensions.9.3.0.nupkg.sha512",
     "C:\\Users\\saile\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\saile\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\saile\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

@@ -1,0 +1,15 @@
+C:\Users\saile\Documents\API´s\Proyecto\MedBuy\MedBuy\MedBuy.Infraestructure\bin\Debug\netcoreapp3.1\MedBuy.Infraestructure.deps.json
+C:\Users\saile\Documents\API´s\Proyecto\MedBuy\MedBuy\MedBuy.Infraestructure\bin\Debug\netcoreapp3.1\MedBuy.Infraestructure.dll
+C:\Users\saile\Documents\API´s\Proyecto\MedBuy\MedBuy\MedBuy.Infraestructure\bin\Debug\netcoreapp3.1\MedBuy.Infraestructure.pdb
+C:\Users\saile\Documents\API´s\Proyecto\MedBuy\MedBuy\MedBuy.Infraestructure\bin\Debug\netcoreapp3.1\MedBuy.Domain.dll
+C:\Users\saile\Documents\API´s\Proyecto\MedBuy\MedBuy\MedBuy.Infraestructure\bin\Debug\netcoreapp3.1\MedBuy.Domain.pdb
+C:\Users\saile\Documents\API´s\Proyecto\MedBuy\MedBuy\MedBuy.Infraestructure\obj\Debug\netcoreapp3.1\MedBuy.Infraestructure.csprojAssemblyReference.cache
+C:\Users\saile\Documents\API´s\Proyecto\MedBuy\MedBuy\MedBuy.Infraestructure\obj\Debug\netcoreapp3.1\MedBuy.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\saile\Documents\API´s\Proyecto\MedBuy\MedBuy\MedBuy.Infraestructure\obj\Debug\netcoreapp3.1\MedBuy.Infraestructure.AssemblyInfo.cs
+C:\Users\saile\Documents\API´s\Proyecto\MedBuy\MedBuy\MedBuy.Infraestructure\obj\Debug\netcoreapp3.1\MedBuy.Infraestructure.csproj.CopyComplete
+C:\Users\saile\Documents\API´s\Proyecto\MedBuy\MedBuy\MedBuy.Infraestructure\obj\Debug\netcoreapp3.1\MedBuy.Infraestructure.dll
+C:\Users\saile\Documents\API´s\Proyecto\MedBuy\MedBuy\MedBuy.Infraestructure\obj\Debug\netcoreapp3.1\MedBuy.Infraestructure.pdb
+C:\Users\saile\Documents\API´s\Proyecto\MedBuy\MedBuy\MedBuy.Infraestructure\bin\Debug\netcoreapp3.1\MedBuy.Infraestructure.runtimeconfig.json
+C:\Users\saile\Documents\API´s\Proyecto\MedBuy\MedBuy\MedBuy.Infraestructure\bin\Debug\netcoreapp3.1\MedBuy.Infraestructure.runtimeconfig.dev.json
+C:\Users\saile\Documents\API´s\Proyecto\MedBuy\MedBuy\MedBuy.Infraestructure\obj\Debug\netcoreapp3.1\MedBuy.Infraestructure.genruntimeconfig.cache
+C:\Users\saile\Documents\API´s\Proyecto\MedBuy\MedBuy\MedBuy.Infraestructure\obj\Debug\netcoreapp3.1\MedBuy.Infraestructure.csproj.CoreCompileInputs.cache
