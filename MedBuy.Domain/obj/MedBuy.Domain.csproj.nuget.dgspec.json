@@ -1,25 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj": {}
+    "D:\\Proyectos\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj": {
+    "D:\\Proyectos\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj",
+        "projectUniqueName": "D:\\Proyectos\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj",
         "projectName": "MedBuy.Domain",
-        "projectPath": "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj",
-        "packagesPath": "C:\\Users\\saile\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Domain\\obj\\",
+        "projectPath": "D:\\Proyectos\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj",
+        "packagesPath": "C:\\Users\\Kids3\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\MedBuy\\MedBuy.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\saile\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Kids3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -56,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

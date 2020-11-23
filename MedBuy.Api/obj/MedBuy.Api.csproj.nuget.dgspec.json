@@ -1,25 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Api\\MedBuy.Api.csproj": {}
+    "D:\\Proyectos\\MedBuy\\MedBuy.Api\\MedBuy.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Api\\MedBuy.Api.csproj": {
+    "D:\\Proyectos\\MedBuy\\MedBuy.Api\\MedBuy.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Api\\MedBuy.Api.csproj",
+        "projectUniqueName": "D:\\Proyectos\\MedBuy\\MedBuy.Api\\MedBuy.Api.csproj",
         "projectName": "MedBuy.Api",
-        "projectPath": "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Api\\MedBuy.Api.csproj",
-        "packagesPath": "C:\\Users\\saile\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Api\\obj\\",
+        "projectPath": "D:\\Proyectos\\MedBuy\\MedBuy.Api\\MedBuy.Api.csproj",
+        "packagesPath": "C:\\Users\\Kids3\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\MedBuy\\MedBuy.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\saile\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Kids3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -31,11 +30,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj": {
-                "projectPath": "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj"
+              "D:\\Proyectos\\MedBuy\\MedBuy.Application\\MedBuy.Application.csproj": {
+                "projectPath": "D:\\Proyectos\\MedBuy\\MedBuy.Application\\MedBuy.Application.csproj"
               },
-              "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Infraestructure\\MedBuy.Infraestructure.csproj": {
-                "projectPath": "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Infraestructure\\MedBuy.Infraestructure.csproj"
+              "D:\\Proyectos\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj": {
+                "projectPath": "D:\\Proyectos\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj"
+              },
+              "D:\\Proyectos\\MedBuy\\MedBuy.Infraestructure\\MedBuy.Infraestructure.csproj": {
+                "projectPath": "D:\\Proyectos\\MedBuy\\MedBuy.Infraestructure\\MedBuy.Infraestructure.csproj"
               }
             }
           }
@@ -48,6 +50,18 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -66,26 +80,90 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj": {
+    "D:\\Proyectos\\MedBuy\\MedBuy.Application\\MedBuy.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj",
-        "projectName": "MedBuy.Domain",
-        "projectPath": "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj",
-        "packagesPath": "C:\\Users\\saile\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Domain\\obj\\",
+        "projectUniqueName": "D:\\Proyectos\\MedBuy\\MedBuy.Application\\MedBuy.Application.csproj",
+        "projectName": "MedBuy.Application",
+        "projectPath": "D:\\Proyectos\\MedBuy\\MedBuy.Application\\MedBuy.Application.csproj",
+        "packagesPath": "C:\\Users\\Kids3\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\MedBuy\\MedBuy.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\saile\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Kids3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Proyectos\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj": {
+                "projectPath": "D:\\Proyectos\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Proyectos\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Proyectos\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj",
+        "projectName": "MedBuy.Domain",
+        "projectPath": "D:\\Proyectos\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj",
+        "packagesPath": "C:\\Users\\Kids3\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\MedBuy\\MedBuy.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Kids3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -122,26 +200,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Infraestructure\\MedBuy.Infraestructure.csproj": {
+    "D:\\Proyectos\\MedBuy\\MedBuy.Infraestructure\\MedBuy.Infraestructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Infraestructure\\MedBuy.Infraestructure.csproj",
+        "projectUniqueName": "D:\\Proyectos\\MedBuy\\MedBuy.Infraestructure\\MedBuy.Infraestructure.csproj",
         "projectName": "MedBuy.Infraestructure",
-        "projectPath": "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Infraestructure\\MedBuy.Infraestructure.csproj",
-        "packagesPath": "C:\\Users\\saile\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Infraestructure\\obj\\",
+        "projectPath": "D:\\Proyectos\\MedBuy\\MedBuy.Infraestructure\\MedBuy.Infraestructure.csproj",
+        "packagesPath": "C:\\Users\\Kids3\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\MedBuy\\MedBuy.Infraestructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\saile\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Kids3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -153,8 +230,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj": {
-                "projectPath": "C:\\Users\\saile\\Documents\\API´s\\Proyecto\\MedBuy\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj"
+              "D:\\Proyectos\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj": {
+                "projectPath": "D:\\Proyectos\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj"
               }
             }
           }
@@ -167,6 +244,32 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[9.3.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -178,11 +281,14 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
