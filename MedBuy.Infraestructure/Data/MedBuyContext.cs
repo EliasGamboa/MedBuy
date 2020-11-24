@@ -1,4 +1,6 @@
 ﻿using System;
+using MedBuy.Domain.Entities;
+using MedBuy.Infraestructure.Data.Configurations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using MedBuy.Domain.Entities;
@@ -22,11 +24,14 @@ namespace MedBuy.Infraestructure.Data
         public virtual DbSet<Producto> Productos { get; set; }
         public virtual DbSet<Usuario> Usuarios { get; set; }
 
+        
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration<Producto>(new ProductoConfiguration());
             modelBuilder.ApplyConfiguration<Usuario>(new UsuarioConfiguration());
         }
 
+        
     }
 }
