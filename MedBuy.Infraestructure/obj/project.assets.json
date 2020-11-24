@@ -5917,7 +5917,6 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.0",
       "FluentValidation.AspNetCore >= 9.3.0",
       "MedBuy.Domain >= 1.0.0",
-      "Microsoft.EntityFrameworkCore.Design >= 5.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.0"
     ]
@@ -5951,6 +5950,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
             "D:\\Proyectos\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj": {
               "projectPath": "D:\\Proyectos\\MedBuy\\MedBuy.Domain\\MedBuy.Domain.csproj"
@@ -5966,6 +5966,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
@@ -5974,12 +5975,6 @@
           "FluentValidation.AspNetCore": {
             "target": "Package",
             "version": "[9.3.0, )"
-          },
-          "Microsoft.EntityFrameworkCore.Design": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[5.0.0, )"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
@@ -6010,7 +6005,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

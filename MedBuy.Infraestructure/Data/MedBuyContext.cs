@@ -3,9 +3,6 @@ using MedBuy.Domain.Entities;
 using MedBuy.Infraestructure.Data.Configurations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using MedBuy.Domain.Entities;
-using MedBuy.Infraestructure.Data.Configurations;
-
 #nullable disable
 
 namespace MedBuy.Infraestructure.Data

@@ -11,7 +11,5 @@ namespace MedBuy.Domain.DTOs
         public int Telefono { get; set; }
         public string Usuario1 { get; set; }
         public string Contraseña { get; set; }
-
-
     }
 }

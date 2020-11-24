@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MedBuy.Infraestructure", "MedBuy.Infraestructure\MedBuy.Infraestructure.csproj", "{05665DD0-2F2A-48E8-8360-C43DFEDADB69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedBuy.Infraestructure", "MedBuy.Infraestructure\MedBuy.Infraestructure.csproj", "{05665DD0-2F2A-48E8-8360-C43DFEDADB69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MedBuy.Api", "MedBuy.Api\MedBuy.Api.csproj", "{E066EA54-0AC6-446B-80C6-DEDBC92160DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedBuy.Api", "MedBuy.Api\MedBuy.Api.csproj", "{E066EA54-0AC6-446B-80C6-DEDBC92160DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MedBuy.Application", "MedBuy.Application\MedBuy.Application.csproj", "{B4228887-F7A3-4110-809A-221EC95D758E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedBuy.Application", "MedBuy.Application\MedBuy.Application.csproj", "{B4228887-F7A3-4110-809A-221EC95D758E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MedBuy.Domain", "MedBuy.Domain\MedBuy.Domain.csproj", "{6F1B743E-C089-4A4F-842F-7225C31DCF4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{73836ACE-A040-478D-81AD-407DDAE8E56D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{73836ACE-A040-478D-81AD-407DDAE8E56D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{73836ACE-A040-478D-81AD-407DDAE8E56D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{73836ACE-A040-478D-81AD-407DDAE8E56D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{05665DD0-2F2A-48E8-8360-C43DFEDADB69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{05665DD0-2F2A-48E8-8360-C43DFEDADB69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05665DD0-2F2A-48E8-8360-C43DFEDADB69}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -29,6 +25,14 @@ Global
 		{E066EA54-0AC6-446B-80C6-DEDBC92160DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E066EA54-0AC6-446B-80C6-DEDBC92160DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E066EA54-0AC6-446B-80C6-DEDBC92160DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4228887-F7A3-4110-809A-221EC95D758E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4228887-F7A3-4110-809A-221EC95D758E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4228887-F7A3-4110-809A-221EC95D758E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4228887-F7A3-4110-809A-221EC95D758E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F1B743E-C089-4A4F-842F-7225C31DCF4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F1B743E-C089-4A4F-842F-7225C31DCF4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F1B743E-C089-4A4F-842F-7225C31DCF4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F1B743E-C089-4A4F-842F-7225C31DCF4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

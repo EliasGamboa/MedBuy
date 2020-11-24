@@ -18,6 +18,14 @@ namespace MedBuy.Application.Mappings
                 destination.Activo = false;
             }));
             CreateMap<ProductoResponseDto, Producto>();
+
+            CreateMap<Usuario, UsuarioRequestDto>();
+            CreateMap<Usuario, UsuarioResponseDto>();
+            CreateMap<UsuarioRequestDto, Usuario>().AfterMap(
+                ((source, destination) =>
+                {
+                }));
+            CreateMap<UsuarioResponseDto, Usuario>();
         }
     }
 }

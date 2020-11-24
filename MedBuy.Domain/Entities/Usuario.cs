@@ -7,7 +7,6 @@ namespace MedBuy.Domain.Entities
 {
     public partial class Usuario : BaseEntity
     {
-        public int Id { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public int? Telefono { get; set; }

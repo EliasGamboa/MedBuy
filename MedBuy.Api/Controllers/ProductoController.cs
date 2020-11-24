@@ -13,7 +13,7 @@ using Microsoft.Extensions.Logging;
 namespace MedBuy.Api.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class ProductoController : ControllerBase
     {
         private readonly IProductoService _service;

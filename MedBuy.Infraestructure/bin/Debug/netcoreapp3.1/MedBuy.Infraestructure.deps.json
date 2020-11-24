@@ -11,7 +11,6 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.0",
           "FluentValidation.AspNetCore": "9.3.0",
           "MedBuy.Domain": "1.0.0",
-          "Microsoft.EntityFrameworkCore.Design": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.0"
         },

@@ -34,7 +34,20 @@ namespace MedBuy.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddControllers(options =>
+                options.Filters.Add<GlobalExceptionFilter>()
+               );
+
+            services.AddDbContext<MedBuyContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("MedBuyConnection"))
+            );
+
+            services.AddScoped(typeof(IRepository<>), typeof(SQLRepository<>));
+            services.AddTransient<IUsuarioService, UsuarioService>();
+            services.AddTransient<IProductoService, ProductoService>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddMvc().AddFluentValidation(options => options.RegisterValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
