@@ -11,37 +11,34 @@ namespace MedBuy.Application.Services
 {
     public class ProductoService : IProductoService
     {
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly IProductoRepository _repository;
 
-        public ProductoService(IUnitOfWork unitOfWork)
+        public ProductoService(IProductoRepository repository)
         {
-            _unitOfWork = unitOfWork;
+            this._repository = repository;
+        }
+        public async Task<IEnumerable<Producto>> GetProductos()
+        {
+            return await _repository.GetProductos();
+        }
+        public async Task<Producto> GetProducto(int id)
+        {
+            return await _repository.GetProducto(id);
         }
 
         public async Task AddProducto(Producto producto)
         {
-            Expression<Func<Producto, bool>> exprProducto = item => item.Nombre == producto.Nombre;
-            var productos = await _unitOfWork.ProductoRepository.FindByCondition(exprProducto);
+            await _repository.AddProducto(producto);
         }
 
-        public async Task DeleteProducto(int id)
+        public async Task<bool> UpdateProducto(Producto producto)
         {
-            await _unitOfWork.ProductoRepository.Delete(id);
+            return await _repository.UpdateProducto(producto);
         }
 
-        public async Task<Producto> GetProducto(int id)
+        public async Task<bool> DeleteProducto(int id)
         {
-            return await _unitOfWork.ProductoRepository.GetById(id);
-        }
-
-        public async Task<IEnumerable<Producto>> GetProductos()
-        {
-            return await _unitOfWork.ProductoRepository.GetAll();
-        }
-
-        public async Task UpdateProducto(Producto producto)
-        {
-            await _unitOfWork.ProductoRepository.Update(producto);
+            return await _repository.DeleteProducto(id);
         }
     }
 }

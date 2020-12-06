@@ -12,37 +12,34 @@ namespace MedBuy.Application.Services
 {
     public class UsuarioService : IUsuarioService
     {
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly IUsuarioRepository _repository;
 
-        public UsuarioService(IUnitOfWork unitOfWork)
+        public UsuarioService(IUsuarioRepository repository)
         {
-            _unitOfWork = unitOfWork;
+            this._repository = repository;
         }
 
         public async Task AddUsuario(Usuario usuario)
         {
-            Expression<Func<Usuario, bool>> exprUsuario = item => item.Nombre == usuario.Nombre;
-            var productos = await _unitOfWork.UsuarioRepository.FindByCondition(exprUsuario);
+            await _repository.AddUsuario(usuario);
         }
 
-        public async Task DeleteUsuario(int id)
+        public async Task<bool> DeleteUsuario(int id)
         {
-            await _unitOfWork.UsuarioRepository.Delete(id);
+            return await _repository.DeleteUsuario(id);
         }
 
         public async Task<Usuario> GetUsuario(int id)
         {
-            return await _unitOfWork.UsuarioRepository.GetById(id);
+            return await _repository.GetUsuario(id);
         }
-
         public async Task<IEnumerable<Usuario>> GetUsuarios()
         {
-            return await _unitOfWork.UsuarioRepository.GetAll();
+            return await _repository.GetUsuarios();
         }
-
-        public async Task UpdateUsuario(Usuario usuario)
+        public async Task<bool> UpdateUsuario(Usuario usuario)
         {
-            await _unitOfWork.UsuarioRepository.Update(usuario);
+            return await _repository.UpdateUsuario(usuario);
         }
     }
 }
