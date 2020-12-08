@@ -4,6 +4,7 @@ using MedBuy.Domain.DTOs;
 using MedBuy.Domain.Entities;
 using MedBuy.Domain.Interfaces;
 using MedBuy.Infraestructure.Repositories;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace MedBuy.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors()]
     public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioService _service;
@@ -33,7 +35,7 @@ namespace MedBuy.Api.Controllers
 
             return Ok(response);
         }
-        [HttpGet("(id:int)")]
+        [HttpGet("{id:int}")]
         public async Task<IActionResult> Get(int id)
         {
             var user = await _service.GetUsuario(id);
@@ -44,7 +46,7 @@ namespace MedBuy.Api.Controllers
             return Ok(response);
         }
         [HttpPost]
-        public async Task<IActionResult> Post(UsuarioRequestDto usuarioDto)
+        public async Task<IActionResult> Post([FromForm] UsuarioRequestDto usuarioDto)
         {
             var user = _mapper.Map<UsuarioRequestDto, Usuario>(usuarioDto);
             await _service.AddUsuario(user);
@@ -62,8 +64,8 @@ namespace MedBuy.Api.Controllers
 
             return Ok(response);
         }
-        [HttpPut]
-        public async Task<IActionResult> Put(int id, UsuarioRequestDto usuarioDto)
+        [HttpPut("{id:int}")]
+        public async Task<IActionResult> Put( int id, [FromForm] UsuarioRequestDto usuarioDto)
         {
             var user = _mapper.Map<Usuario>(usuarioDto);
             user.Id = id;

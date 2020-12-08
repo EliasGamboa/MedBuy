@@ -48,7 +48,7 @@ namespace MedBuy.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(ProductoRequestDto productoDto)
+        public async Task<IActionResult> Post([FromForm] ProductoRequestDto productoDto)
         {
             var product = _mapper.Map<ProductoRequestDto, Producto>(productoDto);
             await _service.AddProducto(product);
@@ -69,7 +69,7 @@ namespace MedBuy.Api.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> Put(int id, ProductoRequestDto productoDto)
+        public async Task<IActionResult> Put(int id, [FromForm] ProductoRequestDto productoDto)
         {
             var producto = _mapper.Map<Producto>(productoDto);
             producto.Id = id;

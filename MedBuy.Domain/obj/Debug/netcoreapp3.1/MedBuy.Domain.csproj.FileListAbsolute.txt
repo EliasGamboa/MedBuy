@@ -16,3 +16,12 @@ D:\Proyectos\MedBuyxD\MedBuy.Domain\obj\Debug\netcoreapp3.1\MedBuy.Domain.Assemb
 D:\Proyectos\MedBuyxD\MedBuy.Domain\obj\Debug\netcoreapp3.1\MedBuy.Domain.csproj.CoreCompileInputs.cache
 D:\Proyectos\MedBuyxD\MedBuy.Domain\obj\Debug\netcoreapp3.1\MedBuy.Domain.dll
 D:\Proyectos\MedBuyxD\MedBuy.Domain\obj\Debug\netcoreapp3.1\MedBuy.Domain.pdb
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Domain\bin\Debug\netcoreapp3.1\MedBuy.Domain.deps.json
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Domain\bin\Debug\netcoreapp3.1\MedBuy.Domain.dll
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Domain\bin\Debug\netcoreapp3.1\MedBuy.Domain.pdb
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Domain\obj\Debug\netcoreapp3.1\MedBuy.Domain.csprojAssemblyReference.cache
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Domain\obj\Debug\netcoreapp3.1\MedBuy.Domain.AssemblyInfoInputs.cache
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Domain\obj\Debug\netcoreapp3.1\MedBuy.Domain.AssemblyInfo.cs
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Domain\obj\Debug\netcoreapp3.1\MedBuy.Domain.csproj.CoreCompileInputs.cache
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Domain\obj\Debug\netcoreapp3.1\MedBuy.Domain.dll
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Domain\obj\Debug\netcoreapp3.1\MedBuy.Domain.pdb
