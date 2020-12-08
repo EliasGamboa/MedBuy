@@ -37,6 +37,9 @@ namespace MedBuy.Infraestructure.Repositories
             var current = await GetProducto(producto.Id);
             current.Nombre = producto.Nombre;
             current.Costo = producto.Costo;
+            current.Sector = producto.Sector;
+            current.CantDisponible = producto.CantDisponible;
+            current.Activo = producto.Activo;
             var rowsUpdate = await _context.SaveChangesAsync();
             return rowsUpdate > 0;
         }
