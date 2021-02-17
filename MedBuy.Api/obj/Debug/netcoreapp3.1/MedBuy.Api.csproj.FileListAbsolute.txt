@@ -367,3 +367,12 @@ C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Api\obj\Debug\netcor
 C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Api\obj\Debug\netcoreapp3.1\MedBuy.Api.dll
 C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Api\obj\Debug\netcoreapp3.1\MedBuy.Api.pdb
 C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Api\obj\Debug\netcoreapp3.1\MedBuy.Api.genruntimeconfig.cache
+D:\Proyectos\MedBuy\MedBuy.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Proyectos\MedBuy\MedBuy.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Proyectos\MedBuy\MedBuy.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Proyectos\MedBuy\MedBuy.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+D:\Proyectos\MedBuy\MedBuy.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+D:\Proyectos\MedBuy\MedBuy.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\Proyectos\MedBuy\MedBuy.Api\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Proyectos\MedBuy\MedBuy.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+D:\Proyectos\MedBuy\MedBuy.Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

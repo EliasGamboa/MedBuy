@@ -72,7 +72,7 @@ namespace MedBuy.Api.Controllers
         public async Task<IActionResult> Put(int id, [FromForm] ProductoRequestDto productoDto)
         {
             var producto = _mapper.Map<Producto>(productoDto);
-            producto.Id = id;
+            producto.ProductoId = id;
 
             await _service.UpdateProducto(producto);
             var response = new ApiResponse<bool>(true);

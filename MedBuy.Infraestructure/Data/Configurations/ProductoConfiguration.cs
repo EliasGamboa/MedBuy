@@ -13,6 +13,10 @@ namespace MedBuy.Infraestructure.Data.Configurations
         {
             builder.ToTable("Producto");
 
+            builder.Property(e => e.ProductoId)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("ProductoID");
+
             builder.Property(e => e.Nombre)
                 .IsRequired()
                 .HasMaxLength(50)

@@ -19,13 +19,13 @@ namespace MedBuy.Application.Mappings
             }));
             CreateMap<ProductoResponseDto, Producto>();
 
-            CreateMap<Usuario, UsuarioRequestDto>();
-            CreateMap<Usuario, UsuarioResponseDto>();
-            CreateMap<UsuarioRequestDto, Usuario>().AfterMap(
+            CreateMap<ApplicationUser, UsuarioRequestDto>();
+            CreateMap<ApplicationUser, UsuarioResponseDto>();
+            CreateMap<UsuarioRequestDto, ApplicationUser>().AfterMap(
                 ((source, destination) =>
                 {
                 }));
-            CreateMap<UsuarioResponseDto, Usuario>();
+            CreateMap<UsuarioResponseDto, ApplicationUser>();
         }
     }
 }

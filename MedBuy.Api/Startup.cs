@@ -44,10 +44,8 @@ namespace MedBuy.Api
                 options.UseSqlServer(Configuration.GetConnectionString("MedBuyConnection"))
             );
 
-            services.AddTransient<IUsuarioService, UsuarioService>();
             services.AddTransient<IProductoService, ProductoService>();
             services.AddTransient<IProductoRepository, ProductoRepository>();
-            services.AddTransient<IUsuarioRepository, UsuarioRepository>();
             services.AddMvc().AddFluentValidation(options => options.RegisterValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies()));
         }
 

@@ -22,7 +22,7 @@ namespace MedBuy.Infraestructure.Repositories
         }
         public async Task<Producto> GetProducto(int id)
         {
-            return await _context.Productos.SingleOrDefaultAsync(Producto => Producto.Id == id)
+            return await _context.Productos.SingleOrDefaultAsync(Producto => Producto.ProductoId == id)
             ?? new Producto();
         }
 
@@ -34,11 +34,11 @@ namespace MedBuy.Infraestructure.Repositories
 
         public async Task<bool> UpdateProducto(Producto producto)
         {
-            var current = await GetProducto(producto.Id);
+            var current = await GetProducto(producto.ProductoId);
             current.Nombre = producto.Nombre;
             current.Costo = producto.Costo;
             current.Sector = producto.Sector;
-            current.CantDisponible = producto.CantDisponible;
+            current.Cantdisponible = producto.Cantdisponible;
             current.Activo = producto.Activo;
             var rowsUpdate = await _context.SaveChangesAsync();
             return rowsUpdate > 0;
