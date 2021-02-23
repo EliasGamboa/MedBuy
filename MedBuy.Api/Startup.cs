@@ -18,6 +18,8 @@ using Microsoft.Extensions.Logging;
 using FluentValidation.AspNetCore;
 using MedBuy.Infraestructure.Filters;
 using MedBuy.Application.Services;
+using Microsoft.AspNetCore.Identity;
+using MedBuy.Domain.Entities;
 
 namespace MedBuy.Api
 {
@@ -44,9 +46,30 @@ namespace MedBuy.Api
                 options.UseSqlServer(Configuration.GetConnectionString("MedBuyConnection"))
             );
 
+            services.AddOptions();
+            services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
+            services.AddSingleton<IEmailSender, EmailSender>();
+
+            services.AddIdentityCore<ApplicationUser>()
+                .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<MedBuyContext>()
+                .AddSignInManager()
+                .AddDefaultTokenProviders();
+
+            services.AddAuthentication(o =>
+            {
+                o.DefaultScheme = IdentityConstants.ApplicationScheme;
+                o.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+            })
+            .AddIdentityCookies(o => { });
+
+
             services.AddTransient<IProductoService, ProductoService>();
             services.AddTransient<IProductoRepository, ProductoRepository>();
-            services.AddMvc().AddFluentValidation(options => options.RegisterValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies()));
+            services.AddTransient<IPedidoService, PedidoService>();
+            services.AddTransient<IPedidoRepository, PedidoRepository>();
+            services.AddMvc().AddFluentValidation(options => 
+                options.RegisterValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

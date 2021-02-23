@@ -1,17 +1,15 @@
-﻿using System;
+﻿using MedBuy.Domain.Entities;
+using System;
 using System.Collections.Generic;
+using System.Text;
 
-#nullable disable
-
-namespace MedBuy.Domain.Entities
+namespace MedBuy.Domain.DTOs
 {
-    public partial class Pedido
+    public class PedidoRequestDto
     {
         public double CostTotal { get; set; }
         public DateTime Fechrealizacion { get; set; }
-        public int PedidoId { get; set; }
         public string UserId { get; set; }
-        public int Cantidad { get; set; }
 
         public virtual ApplicationUser User { get; set; }
     }
