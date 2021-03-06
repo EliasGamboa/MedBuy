@@ -50,5 +50,31 @@ namespace MedBuy.Infraestructure.Repositories
             var rowsDelete = await _context.SaveChangesAsync();
             return rowsDelete > 0;
         }
+        
+        //DetallePedido
+
+        public async Task<IEnumerable<DetallePedido>> GetDetallePedidos()
+        {
+            return await _context.DetallePedidos.ToListAsync();
+        }
+
+        public async Task<DetallePedido> GetDetalle(int id)
+        {
+            return await _context.DetallePedidos.SingleOrDefaultAsync(Detalle => Detalle.PedidoId == id)
+            ?? new DetallePedido();
+        }
+
+        public async Task AddDetalle(DetallePedido detalle)
+        {
+            _context.DetallePedidos.Add(detalle);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<bool> DeleteDetalle(int id)
+        {
+
+            var rowsDelete = await _context.SaveChangesAsync();
+            return rowsDelete > 0;
+        }
     }
 }

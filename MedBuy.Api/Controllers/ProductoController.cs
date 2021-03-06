@@ -7,11 +7,13 @@ using MedBuy.Api.Responses;
 using MedBuy.Domain.DTOs;
 using MedBuy.Domain.Entities;
 using MedBuy.Domain.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 namespace MedBuy.Api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class ProductoController : ControllerBase

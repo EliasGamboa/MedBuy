@@ -38,5 +38,27 @@ namespace MedBuy.Application.Services
         {
             return await _repository.DeletePedido(id);
         }
+
+        //DetallePedido
+
+        public async Task<IEnumerable<DetallePedido>> GetDetallePedidos()
+        {
+            return await _repository.GetDetallePedidos();
+        }
+
+        public async Task<DetallePedido> GetDetalle(int id)
+        {
+            return await _repository.GetDetalle(id);
+        }
+
+        public async Task AddDetalle(DetallePedido detalle)
+        {
+            await _repository.AddDetalle(detalle);
+        }
+
+        public async Task<bool> DeleteDetalle(int id)
+        {
+            return await _repository.DeleteDetalle(id);
+        }
     }
 }

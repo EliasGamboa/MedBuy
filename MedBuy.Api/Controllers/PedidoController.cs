@@ -7,11 +7,13 @@ using MedBuy.Api.Responses;
 using MedBuy.Domain.DTOs;
 using MedBuy.Domain.Entities;
 using MedBuy.Domain.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 namespace MedBuy.Api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class PedidoController : Controller
@@ -64,8 +66,15 @@ namespace MedBuy.Api.Controllers
             await _service.DeletePedido(id);
 
             var response = new ApiResponse<bool>(true);
+            /*var ifr = true;
+
+            if(ifr == true)
+            {
+                await _service.DeleteDetalle(id);
+            }*/
 
             return Ok(response);
+
         }
 
         [HttpPut("{id:int}")]

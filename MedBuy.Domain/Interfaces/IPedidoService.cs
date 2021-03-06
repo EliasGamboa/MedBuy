@@ -17,5 +17,13 @@ namespace MedBuy.Domain.Interfaces
         Task<bool> UpdatePedido(Pedido pedido);
 
         Task<bool> DeletePedido(int id);
+        //Detalle pedido
+        Task<IEnumerable<DetallePedido>> GetDetallePedidos();
+
+        Task<DetallePedido> GetDetalle(int id);
+
+        Task AddDetalle(DetallePedido detalle);
+
+        Task<bool> DeleteDetalle(int id);
     }
 }
