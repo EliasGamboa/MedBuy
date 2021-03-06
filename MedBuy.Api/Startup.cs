@@ -85,7 +85,7 @@ namespace MedBuy.Api
             
 
             app.UseRouting();
-
+            app.UseAuthorization();
             app.UseCors(options =>
             {
                 options.WithOrigins("https://localhost:44340");

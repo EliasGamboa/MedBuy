@@ -12,7 +12,8 @@ using Microsoft.Extensions.Logging;
 
 namespace MedBuy.Api.Controllers
 {
-
+    [ApiController]
+    [Route("api/[controller]")]
     [Authorize]
     public class ManageController : Controller
     {

@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 
 namespace MedBuy.Api.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     [Authorize]
     public class AdministrationController : Controller
     {

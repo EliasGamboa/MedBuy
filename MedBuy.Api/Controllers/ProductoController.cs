@@ -28,6 +28,7 @@ namespace MedBuy.Api.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IActionResult> Get()
         {
             var products = await _service.GetProductos();
