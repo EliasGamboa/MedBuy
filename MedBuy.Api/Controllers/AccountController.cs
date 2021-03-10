@@ -37,7 +37,7 @@ namespace MedBuy.Api.Controllers
         //
         // GET: /Account/Login
         [HttpGet]
-        [Route("[controller]/Login")]
+        [Route("Login")]
         [AllowAnonymous]
         public IActionResult Login(string returnUrl = null)
         {
@@ -48,7 +48,7 @@ namespace MedBuy.Api.Controllers
         //
         // POST: /Account/Login
         [HttpPost]
-        [Route("[controller]/Login")]
+        [Route("Login")]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
@@ -64,10 +64,10 @@ namespace MedBuy.Api.Controllers
                     _logger.LogInformation(1, "User logged in.");
                     return RedirectToLocal(returnUrl);
                 }
-                if (result.RequiresTwoFactor)
+                /*if (result.RequiresTwoFactor)
                 {
                     return RedirectToAction(nameof(SendCode), new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
-                }
+                }*/
                 if (result.IsLockedOut)
                 {
                     _logger.LogWarning(2, "User account locked out.");
@@ -87,7 +87,7 @@ namespace MedBuy.Api.Controllers
         //
         // GET: /Account/Register
         [HttpGet]
-        [Route("[controller]/Register")]
+        [Route("Register")]
         [AllowAnonymous]
         public IActionResult Register(string returnUrl = null)
         {
@@ -98,7 +98,7 @@ namespace MedBuy.Api.Controllers
         //
         // POST: /Account/Register
         [HttpPost]
-        [Route("[controller]/Register")]
+        [Route("Register")]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
@@ -128,7 +128,7 @@ namespace MedBuy.Api.Controllers
         //
         // POST: /Account/LogOff
         [HttpPost]
-        [Route("[controller]/LogOff")]
+        [Route("LogOff")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> LogOff()
         {
@@ -235,7 +235,7 @@ namespace MedBuy.Api.Controllers
 
         // GET: /Account/ConfirmEmail
         [HttpGet]
-        [Route("[controller]/ConfirmEmail")]
+        [Route("ConfirmEmail")]
         [AllowAnonymous]
         public async Task<IActionResult> ConfirmEmail(string userId, string code)
         {
@@ -255,7 +255,7 @@ namespace MedBuy.Api.Controllers
         //
         // GET: /Account/ForgotPassword
         [HttpGet]
-        [Route("[controller]/ForgotPassword")]
+        [Route("ForgotPassword")]
         [AllowAnonymous]
         public IActionResult ForgotPassword()
         {
@@ -265,7 +265,7 @@ namespace MedBuy.Api.Controllers
         //
         // POST: /Account/ForgotPassword
         [HttpPost]
-        [Route("[controller]/ForgotPassword")]
+        [Route("ForgotPassword")]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
@@ -293,7 +293,7 @@ namespace MedBuy.Api.Controllers
         //
         // GET: /Account/ForgotPasswordConfirmation
         [HttpGet]
-        [Route("[controller]/ForgotPasswordConfirmation")]
+        [Route("ForgotPasswordConfirmation")]
         [AllowAnonymous]
         public IActionResult ForgotPasswordConfirmation()
         {
@@ -303,7 +303,7 @@ namespace MedBuy.Api.Controllers
         //
         // GET: /Account/ResetPassword
         [HttpGet]
-        [Route("[controller]/ResetPassword")]
+        [Route("ResetPassword")]
         [AllowAnonymous]
         public IActionResult ResetPassword(string code = null)
         {
@@ -313,7 +313,7 @@ namespace MedBuy.Api.Controllers
         //
         // POST: /Account/ResetPassword
         [HttpPost]
-        [Route("[controller]/ResetPassword")]
+        [Route("ResetPassword")]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
@@ -340,7 +340,7 @@ namespace MedBuy.Api.Controllers
         //
         // GET: /Account/ResetPasswordConfirmation
         [HttpGet]
-        [Route("[controller]/ResetPasswordConfirmation")]
+        [Route("ResetPasswordConfirmation")]
         [AllowAnonymous]
         public IActionResult ResetPasswordConfirmation()
         {
@@ -350,7 +350,7 @@ namespace MedBuy.Api.Controllers
         //
         // GET: /Account/SendCode
         [HttpGet]
-        [Route("[controller]/SendCode")]
+        [Route("SendCode")]
         [AllowAnonymous]
         public async Task<ActionResult> SendCode(string returnUrl = null, bool rememberMe = false)
         {
@@ -367,7 +367,7 @@ namespace MedBuy.Api.Controllers
         //
         // POST: /Account/SendCode
         [HttpPost]
-        [Route("[controller]/SendCode")]
+        [Route("SendCode")]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> SendCode(SendCodeViewModel model)
@@ -411,7 +411,7 @@ namespace MedBuy.Api.Controllers
         //
         // GET: /Account/VerifyCode
         [HttpGet]
-        [Route("[controller]/VerifyCode")]
+        [Route("VerifyCode")]
         [AllowAnonymous]
         public async Task<IActionResult> VerifyCode(string provider, bool rememberMe, string returnUrl = null)
         {
@@ -427,7 +427,7 @@ namespace MedBuy.Api.Controllers
         //
         // POST: /Account/VerifyCode
         [HttpPost]
-        [Route("[controller]/VerifyCode")]
+        [Route("VerifyCode")]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> VerifyCode(VerifyCodeViewModel model)
@@ -460,7 +460,7 @@ namespace MedBuy.Api.Controllers
         //
         // GET: /Account/VerifyAuthenticatorCode
         [HttpGet]
-        [Route("[controller]/VerifyAuthenticatorCode")]
+        [Route("VerifyAuthenticatorCode")]
         [AllowAnonymous]
         public async Task<IActionResult> VerifyAuthenticatorCode(bool rememberMe, string returnUrl = null)
         {
@@ -476,7 +476,7 @@ namespace MedBuy.Api.Controllers
         //
         // POST: /Account/VerifyAuthenticatorCode
         [HttpPost]
-        [Route("[controller]/VerifyAuthenticatorCode")]
+        [Route("VerifyAuthenticatorCode")]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> VerifyAuthenticatorCode(VerifyAuthenticatorCodeViewModel model)
@@ -509,7 +509,7 @@ namespace MedBuy.Api.Controllers
         //
         // GET: /Account/UseRecoveryCode
         [HttpGet]
-        [Route("[controller]/UseRecoveryCode")]
+        [Route("UseRecoveryCode")]
         [AllowAnonymous]
         public async Task<IActionResult> UseRecoveryCode(string returnUrl = null)
         {
@@ -525,7 +525,7 @@ namespace MedBuy.Api.Controllers
         //
         // POST: /Account/UseRecoveryCode
         [HttpPost]
-        [Route("[controller]/UseRecoveryCode")]
+        [Route("UseRecoveryCode")]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> UseRecoveryCode(UseRecoveryCodeViewModel model)

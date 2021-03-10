@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace MedBuy.Infraestructure.Data
 {
-    public partial class MedBuyContext : IdentityDbContext
+    public partial class MedBuyContext : IdentityDbContext<ApplicationUser>
     {
         public MedBuyContext()
         {

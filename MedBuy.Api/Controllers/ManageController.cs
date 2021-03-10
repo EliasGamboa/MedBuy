@@ -1,6 +1,5 @@
 using System.Linq;
 using System.Threading.Tasks;
-using IdentitySample.Models;
 using IdentitySample.Models.ManageViewModels;
 using MedBuy.Domain.Entities;
 using MedBuy.Domain.Entities.EntitiesForAspIdentity.ManageViewModels;
@@ -13,7 +12,7 @@ using Microsoft.Extensions.Logging;
 namespace MedBuy.Api.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [Authorize]
     public class ManageController : Controller
     {
@@ -37,6 +36,7 @@ namespace MedBuy.Api.Controllers
         //
         // GET: /Manage/Index
         [HttpGet]
+        [Route("Index")]
         public async Task<IActionResult> Index(ManageMessageId? message = null)
         {
             ViewData["StatusMessage"] =
@@ -61,9 +61,10 @@ namespace MedBuy.Api.Controllers
             return Ok(model);
         }
 
-        //
+        
         // POST: /Manage/RemoveLogin
         [HttpPost]
+        [Route("RemoveLogin")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> RemoveLogin(RemoveLoginViewModel account)
         {
@@ -83,10 +84,10 @@ namespace MedBuy.Api.Controllers
 
         //
         // GET: /Manage/AddPhoneNumber
-        public IActionResult AddPhoneNumber()
+        /*public IActionResult AddPhoneNumber()
         {
             return Ok();
-        }
+        }*/
 
        /* // POST: /Manage/AddPhoneNumber
         [HttpPost]
@@ -107,6 +108,7 @@ namespace MedBuy.Api.Controllers
 
         // POST: /Manage/ResetAuthenticatorKey
         [HttpPost]
+        [Route("ResetAuthenticatorKey")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ResetAuthenticatorKey()
         {
@@ -122,6 +124,7 @@ namespace MedBuy.Api.Controllers
         //
         // POST: /Manage/GenerateRecoveryCode
         [HttpPost]
+        [Route("GenerateRecoveryCode")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> GenerateRecoveryCode()
         {
@@ -137,7 +140,7 @@ namespace MedBuy.Api.Controllers
 
         //
         // POST: /Manage/EnableTwoFactorAuthentication
-        [HttpPost]
+        /*[HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> EnableTwoFactorAuthentication()
         {
@@ -219,11 +222,12 @@ namespace MedBuy.Api.Controllers
                 }
             }
             return RedirectToAction(nameof(Index), new { Message = ManageMessageId.Error });
-        }
+        }*/
 
         //
         // GET: /Manage/ChangePassword
         [HttpGet]
+        [Route("ChangePassword")]
         public IActionResult ChangePassword()
         {
             return Ok();
@@ -232,6 +236,7 @@ namespace MedBuy.Api.Controllers
         //
         // POST: /Manage/ChangePassword
         [HttpPost]
+        [Route("ChangePassword")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
         {
@@ -258,6 +263,7 @@ namespace MedBuy.Api.Controllers
         //
         // GET: /Manage/SetPassword
         [HttpGet]
+        [Route("SetPassword")]
         public IActionResult SetPassword()
         {
             return Ok();
@@ -266,6 +272,7 @@ namespace MedBuy.Api.Controllers
         //
         // POST: /Manage/SetPassword
         [HttpPost]
+        [Route("SetPassword")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> SetPassword(SetPasswordViewModel model)
         {
@@ -291,6 +298,7 @@ namespace MedBuy.Api.Controllers
 
         //GET: /Manage/ManageLogins
         [HttpGet]
+        [Route("ManageLogins")]
         public async Task<IActionResult> ManageLogins(ManageMessageId? message = null)
         {
             ViewData["StatusMessage"] =
@@ -316,7 +324,8 @@ namespace MedBuy.Api.Controllers
 
         //
         // POST: /Manage/LinkLogin
-        [HttpPost]
+        /*[HttpPost]
+        [Route("LinkLogin")]
         [ValidateAntiForgeryToken]
         public IActionResult LinkLogin(string provider)
         {
@@ -324,11 +333,12 @@ namespace MedBuy.Api.Controllers
             var redirectUrl = Url.Action("LinkLoginCallback", "Manage");
             var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl, _userManager.GetUserId(User));
             return Challenge(properties, provider);
-        }
+        }*/
 
         //
         // GET: /Manage/LinkLoginCallback
-        [HttpGet]
+       /* [HttpGet]
+        [Route("LinkLoginCallback")]
         public async Task<ActionResult> LinkLoginCallback()
         {
             var user = await GetCurrentUserAsync();
@@ -344,7 +354,7 @@ namespace MedBuy.Api.Controllers
             var result = await _userManager.AddLoginAsync(user, info);
             var message = result.Succeeded ? ManageMessageId.AddLoginSuccess : ManageMessageId.Error;
             return RedirectToAction(nameof(ManageLogins), new { Message = message });
-        }
+        }*/
 
         #region Helpers
 
