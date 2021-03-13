@@ -1,25 +1,23 @@
 using System;
 using AutoMapper;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using MedBuy.Domain.Interfaces;
 using MedBuy.Infraestructure.Data;
 using MedBuy.Infraestructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using FluentValidation.AspNetCore;
 using MedBuy.Infraestructure.Filters;
 using MedBuy.Application.Services;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using MedBuy.Domain.Entities;
+using System.Text;
+using Newtonsoft.Json.Serialization;
 
 namespace MedBuy.Api
 {
@@ -46,10 +44,6 @@ namespace MedBuy.Api
                 options.UseSqlServer(Configuration.GetConnectionString("MedBuyConnection"))
             );
 
-            services.AddOptions();
-            services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
-            services.AddSingleton<IEmailSender, EmailSender>();
-
             services.AddIdentityCore<ApplicationUser>()
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<MedBuyContext>()
@@ -70,6 +64,29 @@ namespace MedBuy.Api
             services.AddTransient<IPedidoRepository, PedidoRepository>();
             services.AddMvc().AddFluentValidation(options => 
                 options.RegisterValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies()));
+
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+           .AddJwtBearer(opt =>
+           {
+
+               opt.TokenValidationParameters = new TokenValidationParameters()
+               {
+                   ValidateIssuerSigningKey = true,
+                   IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:Token").Value)),
+                   ValidateIssuer = false,
+                   ValidateAudience = false
+               };
+           });
+
+            services.AddControllers()
+                .AddNewtonsoftJson(options =>
+                {
+                options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
