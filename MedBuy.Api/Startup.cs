@@ -18,6 +18,7 @@ using Microsoft.IdentityModel.Tokens;
 using MedBuy.Domain.Entities;
 using System.Text;
 using Newtonsoft.Json.Serialization;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MedBuy.Api
 {
@@ -50,14 +51,6 @@ namespace MedBuy.Api
                 .AddSignInManager()
                 .AddDefaultTokenProviders();
 
-            services.AddAuthentication(o =>
-            {
-                o.DefaultScheme = IdentityConstants.ApplicationScheme;
-                o.DefaultSignInScheme = IdentityConstants.ExternalScheme;
-            })
-            .AddIdentityCookies(o => { });
-
-
             services.AddTransient<IProductoService, ProductoService>();
             services.AddTransient<IProductoRepository, ProductoRepository>();
             services.AddTransient<IPedidoService, PedidoService>();
@@ -72,21 +65,32 @@ namespace MedBuy.Api
             })
            .AddJwtBearer(opt =>
            {
-
                opt.TokenValidationParameters = new TokenValidationParameters()
                {
                    ValidateIssuerSigningKey = true,
-                   IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:Token").Value)),
+                   IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("AppSettings:Token")),
                    ValidateIssuer = false,
                    ValidateAudience = false
                };
-           });
+           })
+           .AddIdentityCookies(o => { });
 
             services.AddControllers()
                 .AddNewtonsoftJson(options =>
                 {
                 options.SerializerSettings.ContractResolver = new DefaultContractResolver();
                 });
+
+            services.AddAuthorization(options =>
+            {
+                var defaultAuthorizationPolicyBuilder = new AuthorizationPolicyBuilder(
+                    JwtBearerDefaults.AuthenticationScheme);
+
+                defaultAuthorizationPolicyBuilder =
+                    defaultAuthorizationPolicyBuilder.RequireAuthenticatedUser();
+
+                options.DefaultPolicy = defaultAuthorizationPolicyBuilder.Build();
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -99,17 +103,10 @@ namespace MedBuy.Api
 
             app.UseHttpsRedirection();
 
-            
-
+            app.UseAuthentication();
             app.UseRouting();
             app.UseAuthorization();
-            app.UseCors(options =>
-            {
-                options.WithOrigins("https://localhost:44340");
-                options.AllowAnyMethod();
-                options.AllowAnyHeader();
-                options.AllowCredentials();
-            });
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

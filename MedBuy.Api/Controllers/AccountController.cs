@@ -13,6 +13,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.IdentityModel.Logging;
 
 namespace MedBuy.Api.Controllers
 {
@@ -124,8 +125,8 @@ namespace MedBuy.Api.Controllers
                 claims.Add(new Claim(ClaimTypes.Role, role));
             }
 
-            var securityKey = new SymmetricSecurityKey(Encoding.ASCII
-            .GetBytes(_configuration.GetSection("AppSettings:Token").Value));
+            IdentityModelEventSource.ShowPII = true;
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("AppSettings:Token"));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha512Signature);
 
             var tokenDescriptor = new SecurityTokenDescriptor
