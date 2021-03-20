@@ -66,12 +66,6 @@ namespace MedBuy.Api.Controllers
             await _service.DeletePedido(id);
 
             var response = new ApiResponse<bool>(true);
-            /*var ifr = true;
-
-            if(ifr == true)
-            {
-                await _service.DeleteDetalle(id);
-            }*/
 
             return Ok(response);
 

@@ -4,6 +4,7 @@ using System.Text;
 
 namespace MedBuy.Domain.DTOs
 {
+    [Serializable]
     public class ProductoRequestDto
     {
         public string Nombre { get; set; }

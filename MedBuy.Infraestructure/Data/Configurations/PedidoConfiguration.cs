@@ -14,16 +14,6 @@ namespace MedBuy.Infraestructure.Data.Configurations
             builder.ToTable("Pedido");
 
             builder.Property(e => e.PedidoId).HasColumnName("PedidoID");
-
-            builder.Property(e => e.UserId)
-                .IsRequired()
-                .HasMaxLength(450);
-
-            builder.HasOne(d => d.User)
-                .WithMany(p => p.Pedidos)
-                .HasForeignKey(d => d.UserId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Pedido_Cliente");
         }
     }
 }
