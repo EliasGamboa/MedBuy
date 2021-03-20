@@ -13,7 +13,7 @@ using Microsoft.Extensions.Logging;
 
 namespace MedBuy.Api.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     [ApiController]
     [Route("api/[controller]")]
     public class PedidoController : Controller
