@@ -1,0 +1,48 @@
+D:\Proyectos\MedBuyxD\MedBuy.Application\bin\Debug\netcoreapp3.1\MedBuy.Application.deps.json
+D:\Proyectos\MedBuyxD\MedBuy.Application\bin\Debug\netcoreapp3.1\MedBuy.Application.dll
+D:\Proyectos\MedBuyxD\MedBuy.Application\bin\Debug\netcoreapp3.1\MedBuy.Application.pdb
+D:\Proyectos\MedBuyxD\MedBuy.Application\bin\Debug\netcoreapp3.1\MedBuy.Domain.dll
+D:\Proyectos\MedBuyxD\MedBuy.Application\bin\Debug\netcoreapp3.1\MedBuy.Domain.pdb
+D:\Proyectos\MedBuyxD\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.csprojAssemblyReference.cache
+D:\Proyectos\MedBuyxD\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.AssemblyInfoInputs.cache
+D:\Proyectos\MedBuyxD\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.AssemblyInfo.cs
+D:\Proyectos\MedBuyxD\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.csproj.CoreCompileInputs.cache
+D:\Proyectos\MedBuyxD\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.csproj.CopyComplete
+D:\Proyectos\MedBuyxD\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.dll
+D:\Proyectos\MedBuyxD\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.pdb
+D:\Proyectos\MedBuy\MedBuy.Application\bin\Debug\netcoreapp3.1\MedBuy.Application.deps.json
+D:\Proyectos\MedBuy\MedBuy.Application\bin\Debug\netcoreapp3.1\MedBuy.Application.dll
+D:\Proyectos\MedBuy\MedBuy.Application\bin\Debug\netcoreapp3.1\MedBuy.Application.pdb
+D:\Proyectos\MedBuy\MedBuy.Application\bin\Debug\netcoreapp3.1\MedBuy.Domain.dll
+D:\Proyectos\MedBuy\MedBuy.Application\bin\Debug\netcoreapp3.1\MedBuy.Domain.pdb
+D:\Proyectos\MedBuy\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.AssemblyInfoInputs.cache
+D:\Proyectos\MedBuy\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.AssemblyInfo.cs
+D:\Proyectos\MedBuy\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.csproj.CoreCompileInputs.cache
+D:\Proyectos\MedBuy\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.csproj.CopyComplete
+D:\Proyectos\MedBuy\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.dll
+D:\Proyectos\MedBuy\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.pdb
+D:\Proyectos\MedBuy\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.csprojAssemblyReference.cache
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Application\bin\Debug\netcoreapp3.1\MedBuy.Application.deps.json
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Application\bin\Debug\netcoreapp3.1\MedBuy.Application.dll
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Application\bin\Debug\netcoreapp3.1\MedBuy.Application.pdb
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Application\bin\Debug\netcoreapp3.1\MedBuy.Domain.dll
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Application\bin\Debug\netcoreapp3.1\MedBuy.Domain.pdb
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.csprojAssemblyReference.cache
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.AssemblyInfoInputs.cache
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.AssemblyInfo.cs
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.csproj.CoreCompileInputs.cache
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.csproj.CopyComplete
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.dll
+C:\Users\saile\Downloads\MedBuy-main (2)\MedBuy-main\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.pdb
+C:\Users\saile\Downloads\MedBuy-main\MedBuy.Application\bin\Debug\netcoreapp3.1\MedBuy.Application.deps.json
+C:\Users\saile\Downloads\MedBuy-main\MedBuy.Application\bin\Debug\netcoreapp3.1\MedBuy.Application.dll
+C:\Users\saile\Downloads\MedBuy-main\MedBuy.Application\bin\Debug\netcoreapp3.1\MedBuy.Application.pdb
+C:\Users\saile\Downloads\MedBuy-main\MedBuy.Application\bin\Debug\netcoreapp3.1\MedBuy.Domain.dll
+C:\Users\saile\Downloads\MedBuy-main\MedBuy.Application\bin\Debug\netcoreapp3.1\MedBuy.Domain.pdb
+C:\Users\saile\Downloads\MedBuy-main\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.csprojAssemblyReference.cache
+C:\Users\saile\Downloads\MedBuy-main\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.AssemblyInfoInputs.cache
+C:\Users\saile\Downloads\MedBuy-main\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.AssemblyInfo.cs
+C:\Users\saile\Downloads\MedBuy-main\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.csproj.CoreCompileInputs.cache
+C:\Users\saile\Downloads\MedBuy-main\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.csproj.CopyComplete
+C:\Users\saile\Downloads\MedBuy-main\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.dll
+C:\Users\saile\Downloads\MedBuy-main\MedBuy.Application\obj\Debug\netcoreapp3.1\MedBuy.Application.pdb
