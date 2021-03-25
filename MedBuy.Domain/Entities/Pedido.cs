@@ -7,9 +7,14 @@ namespace MedBuy.Domain.Entities
 {
     public partial class Pedido
     {
-        public double CostTotal { get; set; }
+        public Pedido()
+        {
+            PedidoProductos = new HashSet<PedidoProducto>();
+        }
+
         public DateTime Fechrealizacion { get; set; }
         public int PedidoId { get; set; }
-        public int Cantidad { get; set; }
+
+        public virtual ICollection<PedidoProducto> PedidoProductos { get; set; }
     }
 }

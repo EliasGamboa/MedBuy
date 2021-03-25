@@ -70,17 +70,5 @@ namespace MedBuy.Api.Controllers
             return Ok(response);
 
         }
-
-        [HttpPut("{id:int}")]
-        public async Task<IActionResult> Put(int id, [FromForm] PedidoRequestDto pedidoDto)
-        {
-            var pedido = _mapper.Map<Pedido>(pedidoDto);
-            pedido.PedidoId = id;
-
-            await _service.UpdatePedido(pedido);
-            var response = new ApiResponse<bool>(true);
-
-            return Ok(response);
-        }
     }
 }

@@ -35,9 +35,6 @@ namespace MedBuy.Infraestructure.Repositories
         public async Task<bool> UpdatePedido(Pedido pedido)
         {
             var current = await GetPedido(pedido.PedidoId);
-            current.Fechrealizacion = pedido.Fechrealizacion;
-            current.CostTotal = pedido.CostTotal;
-            current.Cantidad = pedido.Cantidad;
             var rowsUpdate = await _context.SaveChangesAsync();
             return rowsUpdate > 0;
         }

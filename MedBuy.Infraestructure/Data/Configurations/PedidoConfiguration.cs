@@ -13,7 +13,9 @@ namespace MedBuy.Infraestructure.Data.Configurations
         {
             builder.ToTable("Pedido");
 
-            builder.Property(e => e.PedidoId).HasColumnName("PedidoID");
+            builder.Property(e => e.PedidoId)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("PedidoID");
         }
     }
 }

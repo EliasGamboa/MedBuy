@@ -7,27 +7,25 @@ using System.Text;
 
 namespace MedBuy.Infraestructure.Data.Configurations
 {
-    public class DetallePedidoConfiguration : IEntityTypeConfiguration<DetallePedido>
+    public class DetallePedidoConfiguration : IEntityTypeConfiguration<PedidoProducto>
     {
-        public void Configure(EntityTypeBuilder<DetallePedido> builder)
+        public void Configure(EntityTypeBuilder<PedidoProducto> builder)
         {
-            builder.HasNoKey();
+            builder.HasKey(e => new { e.PedidoId, e.ProductoId });
 
-            builder.ToTable("DetallePedido");
+            builder.ToTable("PedidoProducto");
 
             builder.Property(e => e.PedidoId).HasColumnName("PedidoID");
 
             builder.Property(e => e.ProductoId).HasColumnName("ProductoID");
 
             builder.HasOne(d => d.Pedido)
-                .WithMany()
-                .HasForeignKey(d => d.PedidoId)
-                .HasConstraintName("FK_ProductoPedido_Pedido");
+                .WithMany(p => p.PedidoProductos)
+                .HasForeignKey(d => d.PedidoId);
 
             builder.HasOne(d => d.Producto)
-                .WithMany()
-                .HasForeignKey(d => d.ProductoId)
-                .HasConstraintName("FK_ProductoPedido_Producto");
+                .WithMany(p => p.PedidoProductos)
+                .HasForeignKey(d => d.ProductoId);
         }
     }
 }

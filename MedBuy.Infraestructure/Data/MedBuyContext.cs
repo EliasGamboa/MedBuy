@@ -21,7 +21,7 @@ namespace MedBuy.Infraestructure.Data
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
-        public virtual DbSet<DetallePedido> DetallePedidos { get; set; }
+        public virtual DbSet<PedidoProducto> PedidosProductos { get; set; }
         public virtual DbSet<Pedido> Pedidos { get; set; }
         public virtual DbSet<Producto> Productos { get; set; }
 
@@ -30,7 +30,7 @@ namespace MedBuy.Infraestructure.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.ApplyConfiguration<DetallePedido>(new DetallePedidoConfiguration());
+            modelBuilder.ApplyConfiguration<PedidoProducto>(new DetallePedidoConfiguration());
             modelBuilder.ApplyConfiguration<Pedido>(new PedidoConfiguration());
             modelBuilder.ApplyConfiguration<Producto>(new ProductoConfiguration());
         }

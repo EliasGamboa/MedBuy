@@ -1,6 +1,7 @@
 ﻿using MedBuy.Domain.Entities;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace MedBuy.Domain.DTOs
@@ -8,9 +9,14 @@ namespace MedBuy.Domain.DTOs
     [Serializable]
     public class PedidoResponseDto
     {
-        public double CostTotal { get; set; }
+        public PedidoResponseDto()
+        {
+            PedidoProductos = new HashSet<PedidoProducto>();
+        }
+
         public DateTime Fechrealizacion { get; set; }
         public int PedidoId { get; set; }
-        public int Cantidad { get; set; }
+
+        public virtual ICollection<PedidoProducto> PedidoProductos { get; set; }
     }
 }
