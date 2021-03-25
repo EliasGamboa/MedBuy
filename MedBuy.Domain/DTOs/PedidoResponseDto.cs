@@ -11,12 +11,14 @@ namespace MedBuy.Domain.DTOs
     {
         public PedidoResponseDto()
         {
-            PedidoProductos = new HashSet<PedidoProducto>();
+            PedidoProductos = new HashSet<PedidoProductoResponseDto>();
         }
 
         public DateTime Fechrealizacion { get; set; }
         public int PedidoId { get; set; }
 
-        public virtual ICollection<PedidoProducto> PedidoProductos { get; set; }
+        public virtual ICollection<PedidoProductoResponseDto> PedidoProductos { get; set; }
+        [NotMapped]
+        public ICollection<Producto> Productos { get; set; }
     }
 }

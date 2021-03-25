@@ -26,6 +26,14 @@ namespace MedBuy.Application.Mappings
                 {
                 }));
             CreateMap<PedidoResponseDto, Pedido>();
+
+            CreateMap<PedidoProducto, PedidoProductoRequestDto>();
+            CreateMap<PedidoProducto, PedidoProductoResponseDto>();
+            CreateMap<PedidoProductoRequestDto, PedidoProducto>().AfterMap(
+                ((source, destination) =>
+                {
+                }));
+            CreateMap<PedidoProductoResponseDto, PedidoProducto>();
         }
     }
 }

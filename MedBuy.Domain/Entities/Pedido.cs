@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
@@ -16,5 +17,7 @@ namespace MedBuy.Domain.Entities
         public int PedidoId { get; set; }
 
         public virtual ICollection<PedidoProducto> PedidoProductos { get; set; }
+        [NotMapped]
+        public ICollection<Producto> Productos { get; set; }
     }
 }

@@ -320,6 +320,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "System.Interactive.Async": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Linq.Async": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [

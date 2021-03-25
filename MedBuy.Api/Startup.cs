@@ -78,7 +78,8 @@ namespace MedBuy.Api
             services.AddControllers()
                 .AddNewtonsoftJson(options =>
                 {
-                options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+                    options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
                 });
 
             services.AddAuthorization(options =>
