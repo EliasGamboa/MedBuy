@@ -12,7 +12,7 @@ namespace MedBuy.Domain.Interfaces
 
         Task<Pedido> GetPedido(int id);
 
-        Task AddPedido(Pedido pedido);
+        Task AddPedido(Pedido pedido, List<int> lista);
 
         Task<bool> UpdatePedido(Pedido pedido);
 
