@@ -27,11 +27,14 @@ namespace MedBuy.Infraestructure.Repositories
             ?? new Pedido();
         }
 
-        public async Task AddPedido(Pedido pedido)
+        public async Task AddPedido(Pedido pedido, List<int> lista)
         {
-            _context.Entry(pedido).State = EntityState.Added;
-            foreach (var c in pedido.Productos)
-                _context.Entry(c).State = EntityState.Unchanged;
+            foreach(int i in lista)
+            {
+                Producto a = _context.Productos.Find(i);
+                pedido.Productos.Add(a);
+            }
+            _context.Pedidos.Add(pedido);
             await _context.SaveChangesAsync();
         }
 

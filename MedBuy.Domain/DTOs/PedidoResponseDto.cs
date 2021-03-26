@@ -19,6 +19,6 @@ namespace MedBuy.Domain.DTOs
 
         public virtual ICollection<PedidoProductoResponseDto> PedidoProductos { get; set; }
         [NotMapped]
-        public ICollection<Producto> Productos { get; set; }
+        public ICollection<ProductoResponseDto> Productos { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace MedBuy.Domain.Interfaces
     {
         Task<IEnumerable<Pedido>> GetPedidos();
         Task<Pedido> GetPedido(int id);
-        Task AddPedido(Pedido pedido);
+        Task AddPedido(Pedido pedido, List<int> lista);
         Task<bool> UpdatePedido(Pedido pedido);
         Task<bool> DeletePedido(int id);
     }
