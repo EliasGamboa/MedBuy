@@ -50,10 +50,10 @@ namespace MedBuy.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromForm] PedidoRequestDto pedidoDto, List<int> lista)
+        public async Task<IActionResult> Post([FromForm] PedidoRequestDto pedidoDto)
         {
             var pedido = _mapper.Map<PedidoRequestDto, Pedido>(pedidoDto);
-            await _service.AddPedido(pedido, lista);
+            await _service.AddPedido(pedido);
             var pedidoresponseDto = _mapper.Map<Pedido, PedidoResponseDto>(pedido);
             var response = new ApiResponse<PedidoResponseDto>(pedidoresponseDto);
 
