@@ -19,11 +19,11 @@ namespace MedBuy.Infraestructure.Repositories
         }
         public async Task<IEnumerable<Pedido>> GetPedidos()
         {
-            return await _context.Pedidos.Include(p => p.PedidoProductos).ToListAsync();
+            return await _context.Pedidos.Include(p => p.Producto).ToListAsync();
         }
         public async Task<Pedido> GetPedido(int id)
         {
-            return await _context.Pedidos.Include(p => p.PedidoProductos).SingleOrDefaultAsync(Pedido => Pedido.PedidoId == id)
+            return await _context.Pedidos.Include(p => p.Producto).SingleOrDefaultAsync(Pedido => Pedido.PedidoId == id)
             ?? new Pedido();
         }
 
@@ -35,17 +35,9 @@ namespace MedBuy.Infraestructure.Repositories
 
         public async Task<bool> UpdatePedido(Pedido pedido)
         {
-            await _context.Database.ExecuteSqlRawAsync("DELETE FROM PedidoProducto WHERE PedidoID = @id",
-                 new SqlParameter("id", pedido.PedidoId));
-
-            var Detalle = pedido.Productos;
-
-            pedido.Productos = null;
-            _context.Entry(pedido).State = EntityState.Modified;
-            pedido.Productos = Detalle;
-            foreach (var c in pedido.Productos)
-                _context.Entry(c).State = EntityState.Unchanged;
-
+            var current = await GetPedido(pedido.PedidoId);
+            current.Cantidad = pedido.Cantidad;
+            current.CostTotal = pedido.CostTotal;
             var rowsUpdate = await _context.SaveChangesAsync();
             return rowsUpdate > 0;
         }

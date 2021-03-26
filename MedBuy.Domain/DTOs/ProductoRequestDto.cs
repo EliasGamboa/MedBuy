@@ -10,7 +10,7 @@ namespace MedBuy.Domain.DTOs
     {
         public ProductoRequestDto()
         {
-            PedidoProductos = new HashSet<PedidoProductoRequestDto>();
+            Pedidos = new HashSet<PedidoRequestDto>();
         }
 
         public bool Activo { get; set; }
@@ -19,6 +19,6 @@ namespace MedBuy.Domain.DTOs
         public string Nombre { get; set; }
         public string Sector { get; set; }
 
-        public virtual ICollection<PedidoProductoRequestDto> PedidoProductos { get; set; }
+        public virtual ICollection<PedidoRequestDto> Pedidos { get; set; }
     }
 }

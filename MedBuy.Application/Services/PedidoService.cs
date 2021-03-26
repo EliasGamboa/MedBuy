@@ -24,9 +24,9 @@ namespace MedBuy.Application.Services
             return await _repository.GetPedido(id);
         }
 
-        public async Task AddPedido(Pedido pedido, List<int> lista)
+        public async Task AddPedido(Pedido pedido)
         {
-            await _repository.AddPedido(pedido, lista);
+            await _repository.AddPedido(pedido);
         }
 
         public async Task<bool> UpdatePedido(Pedido pedido)

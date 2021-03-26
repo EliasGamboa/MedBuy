@@ -13,9 +13,16 @@ namespace MedBuy.Infraestructure.Data.Configurations
         {
             builder.ToTable("Pedido");
 
-            builder.Property(e => e.PedidoId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("PedidoID");
+            builder.Property(e => e.PedidoId).HasColumnName("PedidoID")
+                .ValueGeneratedOnAdd();
+
+            builder.Property(e => e.ProductoId).HasColumnName("ProductoID");
+
+            builder.HasOne(d => d.Producto)
+                .WithMany(p => p.Pedidos)
+                .HasForeignKey(d => d.ProductoId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Pedido_ProductoID");
         }
     }
 }
